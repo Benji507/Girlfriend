@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pregunta Especial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="background-layer">
+        <img id="background-image" class="background-image" alt="Fondo personalizado" />
+        <div class="background-tint"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+      </div>
+
+      <section class="card">
+        <button id="music-toggle" class="music-toggle" type="button" aria-label="Activar o pausar musica">
+          &#9835;
+        </button>
+
+        <div class="icon-ring">
+          <img id="question-icon" class="question-icon" alt="Icono personalizado" />
+        </div>
+
+        <p id="eyebrow" class="eyebrow"></p>
+        <h1 id="main-question" class="main-question"></h1>
+        <p id="support-text" class="support-text"></p>
+
+        <div id="button-stage" class="button-stage">
+          <button id="yes-button" class="answer-button yes-button" type="button"></button>
+          <button id="no-button" class="answer-button no-button" type="button"></button>
+        </div>
+
+        <p class="footer-note">Puedes cambiar fondo, icono, musica y textos desde <code>config.js</code>.</p>
+      </section>
+
+      <div id="success-modal" class="success-modal hidden" aria-hidden="true">
+        <div class="success-card">
+          <h2 id="success-title"></h2>
+          <p id="success-message"></p>
+          <button id="close-modal" class="answer-button modal-button" type="button">Cerrar</button>
+        </div>
+      </div>
+
+      <audio id="background-music" preload="auto" loop></audio>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
